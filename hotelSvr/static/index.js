@@ -11,6 +11,7 @@ socket.on('image', src => {
     document.getElementById('img-qr-code').setAttribute('src', src)
 })
 
+
 socket.on('data', data => {
     document.getElementById('img-qr-code').setAttribute('src', '')
     let b = document.createElement('button')

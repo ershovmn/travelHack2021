@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "RUSSPASS TEST",
+    "description": "",
+    "version": "0.0.1",
+    "icons": {"128": "logo.png"},
+    "action": {
+		"default_icon": "logo.png",
+		"default_popup": "popup.html"
+	},
+    "background.service_worker": "background.js",
+    "host_permissions": [
+        "https://*/*",
+        "https://cd53fe9a8c5c.ngrok.io/*"
+    ],
+    "permisions": [
+        "activeTab",
+        "tabs",
+        "webRequest",
+        "https://cd53fe9a8c5c.ngrok.io/*"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": [],
+            "matches": [ "https://cd53fe9a8c5c.ngrok.io/*"]
+        }
+    ]
+}

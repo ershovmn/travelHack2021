@@ -47,6 +47,10 @@ app.get('/fail', (req, res) => {
     res.sendFile(__dirname + '/static/fail.html')
 })
 
+app.get('/test', (req, res) => {
+    res.sendFile(__dirname + '/static/untitled.html')
+})
+
 io.on('connection', (socket) => {
     console.log('connectiom')
     sockets.push(socket)

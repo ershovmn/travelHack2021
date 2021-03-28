@@ -22,7 +22,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
     }
 })
 
-// chrome.browserAction.onClicked.addListener(handleBrowserActionClicked)
+chrome.browserAction.onClicked.addListener(handleBrowserActionClicked)
 
 // function handleBrowserActionClicked(tab) {
 //     console.log('jdkgewuiavbvu')
@@ -32,9 +32,9 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
 //   chrome.windows.create(opts, handleWindowCreated);
 // }
 
-// function handleWindowCreated(window) {
-//   console.log('done');
-// }
+function handleWindowCreated(window) {
+  console.log('done');
+}
 
 let data = {
     sites: [
@@ -42,7 +42,7 @@ let data = {
             name: 'ihg',
             rules: [
                 {
-                    match: 'https://www.ihg.com/rewardsclub/ru/ru/enrollment/join*',
+                    match: 'https://www.ihg.com/rewardsclub/ru/ru/enrollment/join',
                     placement: '.page-title-container',
                     fields: {
                         first_name: '#firstName',

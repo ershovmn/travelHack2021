@@ -1,14 +1,33 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Успешно</title>
+        <title>Провал</title>
     </head>
     <body>
-        <p>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            h1 {
+                color: #ff2f00;
+            }
+            p {
+                color: black;
+            }
+            img {
+                max-width: 500px;
+                min-width: 320px;
+                width: 20vw;
+            }
+        </style>
+        <h1>
             Авторизация не удалась.
-        </p>
+        </h1>
         <p>
             Пожалуйста, обратитесь к администатору отеля.
         </p>
+        <img src='/static/error.svg'/>
     </body>
 </html>
