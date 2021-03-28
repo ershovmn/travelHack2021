@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='/static/styles/index.css'/>
+    </head>
+    <body>
+        <div class='main-left'>
+
+            <a>
+                <img src='/static/images/logo-white.39c96467.svg' />
+            </a>
+        </div>
+        <div class="main-right">
+            <div class='header'>
+                <a>
+                    <img src='/static/images/logo.fbfdc042.svg'/>
+                </a>
+                <button>
+                    <img src='/static/images/cancel.svg'/>
+                </button>
+            </div>
+            <form>
+                <h1>Авторизация</h1>
+                <div class='field'>
+                    <label>Телефон</label></br>
+                    <input id='phone' type='tel'/>
+                </div>
+                <div class='field'>
+                    <label>Способ входа</label></br>
+                    <div class='radio'>
+                        <input type='radio' value='phone' name='method'>
+                        <span>Код из смс</span>
+                    </div>
+                    <div class='radio'>
+                        <input type='radio' value='pass' name='method'>
+                        <span>Пароль</span>
+                    </div>
+                </div>
+                <button>Далее</button>
+            </form>
+        </div>
+    </body>
+</html>

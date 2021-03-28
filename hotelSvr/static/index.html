@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href="/static/styles.css"/>
+    </head>
+    <body>   
+        <main>
+            <div class='main-left'>
+                <div>
+                    Powered by 
+                    <img src='/static/logo.svg' />
+                </div>
+            </div>
+            <div class='main-right'>
+                <div>
+                    <h1>Добро пожаловать в отель "Академическая Гребля"</h1>
+                    <p>Для улучшения качества обслуживания клиентов, мы предлагаем вам быстрее зарегистрироваться в нашем отеле.</p>
+                    <h2>Что для этого нужно?</h2>
+                    <ul>
+                        <li>
+                            <span>Учетная запись <i>RUSSPASSID</i></span>
+                        </li>
+                        <li>
+                            <span>Телефон с камерой</span>
+                        </li>
+                        <li>
+                            <span>Отсканировать <i>QR</i>-код на экране</span>
+                        </li>
+                        <li>
+                            <span>Подтвердить авторизация</span>
+                        </li>
+                    </ul>
+                    <h2>Какие данные нам нужны</h2>
+                    <ul>
+                        <li>
+                            <span>Номер мобильного телефона</span>
+                        </li>
+                        <li>
+                            <span>Твоё ФИО</span>
+                        </li>
+                        <li>
+                            <span>Данные паспорта</span>
+                        </li>
+                    </ul>
+                </div>
+                <img src='' id='img-qr-code'/>
+            </div>
+        </main>
+        <script src='/socket.io/socket.io.js'></script>
+        <script src='/static/index.js'></script>
+    </body>
+</html>

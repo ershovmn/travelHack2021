@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel='stylesheet' href='/static/styles/index.css'/>
+    </head>
+    <body>
+        <div class='main-left'>
+
+            <a>
+                <img src='/static/images/logo-white.39c96467.svg' />
+            </a>
+        </div>
+        <div class="main-right">
+            <div class='header'>
+                <a>
+                    <img src='/static/images/logo.fbfdc042.svg'/>
+                </a>
+                <button>
+                    <img src='/static/images/cancel.svg'/>
+                </button>
+            </div>
+            <form>
+                <h1>Регистрация</h1>
+                <div class='field'>
+                    <label>Телефон</label></br>
+                    <input id='user_phone' type='tel'/>
+                </div>
+                <div class='field'>
+                    <label>Фаимилия</label></br>
+                    <input id='user_last_name' type='text'/>
+                </div>
+                <div class='field'>
+                    <label>Имя</label></br>
+                    <input id='user_first_name' type='text'/>
+                </div>
+                <div class='field'>
+                    <label>Пароль</label></br>
+                    <input id='user_password' type='password' />
+                    <ul id='pass-vaid'>
+                        <li>6 или более символов</li>
+                        <li>Латинские буквы или кириллица в любом регистре (a-z, A-Z, а-я, А-Я)</li>
+                        <li>Цифры (0-9)</li>
+                    </ul>
+                </div>
+                <button disabled id='log-in'>Зарегистрироваться</button>
+            </form>
+        </div>
+        <script src='/static/scripts/valid.js'></script>
+    </body>
+</html>

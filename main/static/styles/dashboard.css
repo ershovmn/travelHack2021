@@ -1,0 +1,333 @@
+@font-face {
+  font-family: 'GolosTextWebRegular';
+  src: url("/static/fonts/Golos-Text_Regular.woff2") format("woff2"), url("/static/fonts/Golos-Text_Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+  font-family: 'GolosTextWebRegular';
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 60px;
+  margin: 12px 0px;
+  padding: 0 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .header-left img {
+  height: 60px;
+}
+
+header a {
+  cursor: pointer;
+}
+
+header .header-right button {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: inherit;
+  border-width: 0px;
+  outline: none;
+  margin: 0px 10px;
+}
+
+header .header-right button svg {
+  height: 30px;
+  width: 30px;
+}
+
+header .header-right button:hover {
+  color: #ff3000;
+}
+
+header .header-right button:hover .fill {
+  fill: #ff3000;
+}
+
+header .header-right span {
+  margin: 0px 10px;
+}
+
+@media (max-width: 720px) {
+  #menu-button {
+    display: block;
+  }
+  #menu-button:hover .fill {
+    fill: #ff3000;
+  }
+}
+
+@media (min-width: 720px) {
+  #menu-button {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .menu {
+    display: none;
+    height: calc(100vh - 84px);
+    background-color: white;
+    z-index: 10000;
+    position: fixed;
+    top: 84px;
+    left: 0px;
+    width: 100vw;
+  }
+  .menu.on {
+    display: block;
+  }
+}
+
+main {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border-top: #c9c8c8 1px solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+@media (min-width: 720px) {
+  main .menu {
+    border-right: #c9c8c8 1px solid;
+    width: 250px;
+  }
+}
+
+main .menu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 30px auto 10px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main .menu ul li {
+  margin: 5px 0px;
+}
+
+main .menu ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15pt;
+}
+
+main .menu ul li a:hover {
+  color: #ff3000;
+}
+
+main .menu ul li.current a {
+  color: #ff3000;
+}
+
+main .content {
+  margin: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+main .content section svg {
+  -webkit-transform: scale(1, -1);
+          transform: scale(1, -1);
+  -webkit-animation: 1s;
+          animation: 1s;
+}
+
+main .content section.collapsed .header svg {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+
+main .content section.collapsed .main {
+  visibility: hidden;
+}
+
+main .content .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 40px;
+}
+
+main .content .header button {
+  background-color: inherit;
+  border: none;
+  width: 30px;
+  height: 30px;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+main .content .header button:hover .fill {
+  fill: red;
+}
+
+main .content .main {
+  margin-left: 20px;
+  margin-top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .content .main .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 260px;
+  min-height: 150px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 10px 10px;
+  border: rgba(201, 200, 200, 0) 1px solid;
+}
+
+main .content .main .card * {
+  margin: 5px 0px;
+}
+
+main .content .main .card button {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  background-color: inherit;
+  height: 30px;
+  border-radius: 5px;
+  border: rgba(201, 200, 200, 0) 1px solid;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+main .content .main .card input {
+  border: rgba(201, 200, 200, 0) 1px solid;
+  outline: none;
+  height: 25px;
+  border-radius: 5px;
+}
+
+main .content .main .card input.head {
+  height: 30px;
+  font-size: 12pt;
+  font-weight: bold;
+}
+
+main .content .main .card:hover {
+  border: #c9c8c8 1px solid;
+}
+
+main .content .main .card:hover input {
+  border: #c9c8c8 1px solid;
+}
+
+main .content .main .card:hover h3 {
+  color: #ff3000;
+}
+
+main .content .main .card:hover button {
+  color: #ff3000;
+  border: #c9c8c8 1px solid;
+}
+
+main .content .main .card div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+/*# sourceMappingURL=dashboard.css.map */

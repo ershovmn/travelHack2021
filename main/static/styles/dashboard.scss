@@ -1,0 +1,288 @@
+@font-face {
+	font-family: 'GolosTextWebRegular';
+	src:
+		url('/static/fonts/Golos-Text_Regular.woff2') format('woff2'),
+		url('/static/fonts/Golos-Text_Regular.woff') format('woff');
+	
+    font-weight: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+
+    font-family: 'GolosTextWebRegular';
+    font-weight: normal;
+    font-style: normal;
+    color:#000000;
+}
+
+$color-hover: #ff3000;
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    height: 60px;
+
+    margin: 12px 0px;
+    padding: 0 10px;
+
+    align-items: center;
+
+    div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .header-left {
+        img {
+            height: 60px;
+        }
+    }
+
+    a {
+        cursor: pointer;
+    }
+
+    .header-right {
+        button {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            svg {
+                height: 30px;
+                width: 30px;
+            }
+            background-color: inherit;
+            border-width: 0px;
+            outline: none;
+            margin: 0px 10px;
+
+            &:hover {
+                color: $color-hover;
+                .fill {
+                    fill: $color-hover;
+                }
+            }
+        }
+
+        span {
+            margin: 0px 10px;
+        }
+    }
+}
+
+@media (max-width: 720px) {
+    #menu-button {
+        display: block;
+
+        &:hover {
+            .fill {
+                fill: $color-hover;
+            }
+        }
+    }
+}
+
+@media (min-width: 720px) {
+    #menu-button {
+        display: none;
+    }
+}
+
+@media (max-width: 720px) {
+    .menu {
+        display: none;
+        height: calc(100vh - 84px);
+        background-color: white;
+
+        z-index: 10000;
+
+        position: fixed;
+
+        top: 84px;
+        left: 0px;
+        width: 100vw;
+
+        &.on {
+            display: block;
+        }
+    }
+}
+
+main {
+    flex: 1;
+    border-top: rgb(201, 200, 200) 1px solid;
+
+    display: flex;
+    flex-direction: row;
+
+    .menu {
+        @media (min-width: 720px) {
+            border-right: rgb(201, 200, 200) 1px solid;
+
+            width: 250px;
+        }
+
+        ul {
+            list-style: none;
+            padding: 0px;
+            margin: 30px auto 10px 20px;
+            display: flex;
+            flex-direction: column;
+            
+            li {
+                margin: 5px 0px;
+                a {
+                    text-decoration: none;
+                    color: black;
+                    font-size: 15pt;
+
+                    &:hover {
+                        color: $color-hover;
+                    }
+                }
+
+                &.current {
+                    a {
+                        color: $color-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    .content {
+        margin: 20px;
+        flex: 1;
+
+        section {
+            svg {
+                transform: scale(1, -1);
+                animation: 1s;
+            }
+
+            &.collapsed {
+                .header {
+                    svg {
+                        transform: scale(1, 1);
+                    }
+                }
+
+                .main {
+                    visibility: hidden;
+                }
+            }
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            height: 40px;
+
+            button {
+                background-color: inherit;
+                border: none;
+                width: 30px;
+                height: 30px;
+                margin: 0;
+                padding: 0;
+                outline: none;
+
+                &:hover {
+                    .fill {
+                        fill: red;
+                    }
+                }
+            }
+        }
+
+        .main {
+            margin-left: 20px;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .card {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                width: 260px;
+                min-height: 150px;
+
+                border-radius: 10px;
+
+                margin-bottom: 15px;
+
+                padding: 10px 10px;
+
+                border:rgba(201, 200, 200, 0) 1px solid;
+
+                * {
+                    margin: 5px 0px;
+                }
+
+                button {
+                    align-self: flex-end;
+                    background-color: inherit;
+                    height: 30px;
+                    border-radius: 5px;
+                    border:rgba(201, 200, 200, 0) 1px solid;
+                    cursor: pointer;
+                    margin-left: 10px;
+                }
+
+                input {
+                    border:rgba(201, 200, 200, 0) 1px solid;
+                    outline: none;
+                    height: 25px;
+                    border-radius: 5px;
+
+                    &.head {
+                        height: 30px;
+                        font-size: 12pt;
+                        font-weight: bold;
+                    }
+                }
+
+                &:hover {
+                    border: rgb(201, 200, 200) 1px solid;
+
+                    input {
+                        border: rgb(201, 200, 200) 1px solid;
+                    }
+
+                    h3 {
+                        color: $color-hover;
+                    }
+
+                    button {
+                        color: $color-hover;
+                        border: rgb(201, 200, 200) 1px solid;
+                    }
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+}

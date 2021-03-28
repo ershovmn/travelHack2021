@@ -1,0 +1,48 @@
+body {
+    width: 200px;
+
+    background-color: #3a3939;
+
+    display: flex;
+    flex-direction: column;
+
+    a {
+        text-decoration: none;
+        margin: 10px 0px;
+        height: 40px;
+        width: 100%;
+
+        text-align: center;
+
+        background-color: inherit;
+        border: none;
+        outline: none;
+        
+        background-color: #ff2f00;
+
+        border-radius: 8px;
+
+        font-weight: bold;
+        font-size: 25px;
+
+        color: white;
+    }
+
+    button {
+        margin: 10px 0px;
+        height: 40px;
+
+        background-color: inherit;
+        border: none;
+        outline: none;
+
+        background-color: #ff2f00;
+
+        border-radius: 8px;
+
+        font-weight: bold;
+        font-size: 25px;
+
+        color: white;
+    }
+}

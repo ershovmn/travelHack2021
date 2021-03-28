@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "RUSSPASS ID",
+    "description": "",
+    "version": "0.0.1",
+    "icons": {"128": "logo.png"},
+    "browser_action": {
+		"default_icon": "logo.png",
+		"default_popup": "popup.html"
+	},
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "persistent": false
+    },
+    "permissions": [
+        "activeTab",
+        "tabs",
+        "https://*/*",
+        "contextMenus"
+    ]
+}

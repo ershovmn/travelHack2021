@@ -1,0 +1,94 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'GolosTextWebRegular';
+  src: url("/fonts/Golos-Text_Regular.woff2") format("woff2"), url("/fonts/Golos-Text_Regular.woff") format("woff");
+  font-weight: normal;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'GolosTextWebRegular';
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: 0;
+  padding: 0;
+  font-family: 'GolosTextWebRegular';
+  font-weight: normal;
+  font-style: normal;
+  color: #000000;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.main-left {
+  background-image: url("/f3894b4f8945c42023c5e77981de481c.jpg");
+  width: 30vw;
+  padding: 30px;
+  background-size: cover;
+}
+
+.main-left div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  color: white;
+  font-size: 25px;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.main-left div img {
+  margin-left: 15px;
+  width: 10vw;
+}
+
+.main-right {
+  margin: 10px auto 20px 50px;
+  min-width: 300px;
+  width: 40%;
+}
+
+.main-right h1 {
+  font-size: 45px;
+}
+
+.main-right p {
+  font-size: 25px;
+}
+
+.main-right h2 {
+  font-size: 35px;
+}
+
+.main-right span {
+  font-size: 25px;
+}
+
+.main-right li::marker {
+  content: '✔  ';
+  color: green;
+}
+
+.main-right canvas {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+/*# sourceMappingURL=globals.css.map */
